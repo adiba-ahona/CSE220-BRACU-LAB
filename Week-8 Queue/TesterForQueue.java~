@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+
+public class TesterForQueue {
+
+    public static void main(String[] args) {
+        // ArrayQueue q = new ArrayQueue(); //comment out this and uncomment next line for linked Queue 
+        ListQueue q = new ListQueue();
+        for (int x = 0; x < 5; x++) {
+            q.enqueue(x);
+        }
+        //   System.out.println(q);
+        //  System.out.println(q.size());
+        q.dequeue();
+        q.dequeue();
+        System.out.println(q);
+        q.enqueue(20);
+        q.enqueue(21);
+        System.out.println(q.peek());
+        System.out.println(q.search(4));
+        for (int x = 0; x < 5; x++) {
+            q.dequeue();
+        }
+
+        System.out.println(q.isEmpty());
+
+    }
+}
